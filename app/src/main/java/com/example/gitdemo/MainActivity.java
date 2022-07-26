@@ -5,15 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-
+    private MyChronometer myChronometer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        System.out.println("=========================");//第一次添加
-
-        System.out.println("=========================");//第二次添加===============++++++
-
+        myChronometer=findViewById(R.id.MyChronometer);
+        getLifecycle().addObserver(myChronometer);
     }
 }
